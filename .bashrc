@@ -9,17 +9,9 @@ export GIT_PS1_SHOWUPSTREAM=auto
 export PS1='[\T \W$(__git_ps1 ":%s")]\$ '
 export LSCOLORS=GxFxCxDxBxegedabagacad
 
-# Setup PATH to use homebrew, ActivePerl, python, soylatte, mysql
+# Setup PATH to use homebrew
 PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-PATH="/usr/local/ActivePerl-5.12/bin:/usr/local/ActivePerl-5.12/site/bin:$PATH"
-PATH="/usr/local/share/python:$PATH"
-PATH="/usr/local/soylatte/bin:$PATH"
-PATH="/usr/local/mysql/bin:$PATH"
 export PATH
-
-export JAVA_HOME="/usr/local/soylatte"
-export CURL_CA_BUNDLE="/usr/share/curl/curl-ca-bundle.crt"
-export SSL_CERT_FILE="/usr/share/curl/curl-ca-bundle.crt"
 
 export EDITOR="vim"
 
@@ -44,7 +36,12 @@ alias diff="colordiff"
 alias make="colormake"
 alias be="bundle exec"
 
-# Load perlbrew, pythonbrew and rvm into the shell
-[[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && . "$HOME/perl5/perlbrew/etc/bashrc"
+# Load perlbrew, pythonbrew and rbenv
+PERLBREW_ROOT="$HOME/.perl5"
+export PERLBREW_ROOT
+[[ -s "$PERLBREW_ROOT/etc/bashrc" ]] && . "$PERLBREW_ROOT/etc/bashrc"
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+PATH="$HOME/.rbenv/bin:$PATH"
+export PATH
+eval "$(rbenv init -)"
