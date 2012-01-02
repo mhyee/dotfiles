@@ -70,8 +70,5 @@ defaults write com.apple.iTunes disablePingSidebar -bool true
 # Disable all the other Ping stuff in iTunes
 defaults write com.apple.iTunes disablePing -bool true
 
-# Use all F1, F2, etc. keys as standard function keys
-defaults write -g com.apple.keyboard.fnState -bool true
-
 # Kill affected applications
 for app in Finder Dock; do killall "$app"; done
