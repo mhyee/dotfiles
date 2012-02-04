@@ -5,6 +5,7 @@ set mouse=a
 set backspace=2
 set autoindent
 set tabstop=2
+set softtabstop=2
 set expandtab
 set sw=2
 
@@ -19,3 +20,5 @@ nnoremap j gj
 nnoremap gk k
 nnoremap gj j
 nnoremap Y y$
+
+autocmd FileType make setlocal noexpandtab
