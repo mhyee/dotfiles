@@ -1,6 +1,11 @@
 # bash completion
 [[ -f "`brew --prefix`/etc/bash_completion" ]] && . "`brew --prefix`/etc/bash_completion"
 
+# Autojump
+if [ -f `brew --prefix`/etc/autojump ]; then
+  . `brew --prefix`/etc/autojump
+fi
+
 # git-aware prompt
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
