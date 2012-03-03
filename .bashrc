@@ -50,3 +50,5 @@ export PERLBREW_ROOT
 PATH="$HOME/.rbenv/bin:$PATH"
 export PATH
 eval "$(rbenv init -)"
+
+export PATH="$HOME/.cabal/bin:$PATH"

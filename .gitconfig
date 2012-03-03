@@ -17,7 +17,7 @@
   lo = log --oneline --decorate
 [user]
   name = Ming-Ho Yee
-  email = ming-ho.yee@uwaterloo.ca
+  email = mh@mhyee.com
 [color]
   ui = auto
   branch = auto
