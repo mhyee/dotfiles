@@ -13,11 +13,8 @@
   dcs = diff --cached --stat=140
   dfw = diff --word-diff=color
   dcw = diff --cached --word-diff=color
-  lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%an%d%Creset %s %Cgreen(%cr)%Creset' --date=relative
+  lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset%C(magenta)%d%Creset %s %C(green)(%cr)%Creset' --date=relative
   lo = log --oneline --decorate
-[user]
-  name = Ming-Ho Yee
-  email = mh@mhyee.com
 [color]
   ui = auto
   branch = auto
@@ -33,12 +30,21 @@
   frag = magenta reverse
   old = red bold
   new = green bold
-[diff]
-  mnemonicprefix = true
-  renames = copies
 [color "status"]
   added = green
   changed = yellow
+[diff]
+  mnemonicprefix = true
+  renames = copies
+[grep]
+  lineNumber = true
+[instaweb]
+  httpd = webrick
+[push]
+  default = upstream
+[user]
+  name = Ming-Ho Yee
+  email = mh@mhyee.com
 [github]
   user = mhyee
 [core]
@@ -47,5 +53,3 @@
   whitespace = fix,trailing-space,cr-at-eol
   ignorecase = false
   pager = less -eirF
-[push]
-  default = upstream
