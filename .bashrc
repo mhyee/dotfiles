@@ -46,9 +46,6 @@ PERLBREW_ROOT="$HOME/.perl5"
 export PERLBREW_ROOT
 [[ -s "$PERLBREW_ROOT/etc/bashrc" ]] && . "$PERLBREW_ROOT/etc/bashrc"
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"
-
-PATH="$HOME/.rbenv/bin:$PATH"
-export PATH
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export PATH="$HOME/.cabal/bin:$PATH"
