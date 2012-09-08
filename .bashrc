@@ -11,7 +11,7 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM=auto
-export PS1='[\T \W$(__git_ps1 ":%s")]\$ '
+export PS1='[\t \W$(__git_ps1 ":%s")]\$ '
 export LSCOLORS=GxFxCxDxBxegedabagacad
 
 # Setup PATH to use homebrew
