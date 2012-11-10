@@ -2,8 +2,8 @@
 [[ -f "`brew --prefix`/etc/bash_completion" ]] && . "`brew --prefix`/etc/bash_completion"
 
 # Autojump
-if [ -f `brew --prefix`/etc/autojump ]; then
-  . `brew --prefix`/etc/autojump
+if [ -f `brew --prefix`/etc/autojump.sh ]; then
+  . `brew --prefix`/etc/autojump.sh
 fi
 
 # git-aware prompt
