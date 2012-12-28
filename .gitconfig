@@ -1,24 +1,44 @@
+[advice]
+  # don't show how to stage/unstage/discard files
+  statusHints = false
+  detachedHead = false
+
 [alias]
+  # add
+  ap = add --patch
+  # commit
   ci = commit
   cm = commit -m
   cam = commit -am
   ca = commit --amend
-  st = status
-  sts = status -s
+  # branch
   br = branch
+  # checkout
   co = checkout
+  # diff
   df = diff
   dc = diff --cached
   dfs = diff --stat=140
   dcs = diff --cached --stat=140
   dfw = diff --word-diff=color
   dcw = diff --cached --word-diff=color
+  last = diff HEAD^
+  # log
   lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset%C(magenta)%d%Creset %s %C(green)(%cr)%Creset' --date=relative
   lo = log --oneline --decorate
+  # reset
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
+  # status
+  st = status
+  sts = status -s
+
 [color]
   ui = auto
   branch = auto
   diff = auto
+  grep = auto
+  interactive = auto
   status = auto
 [color "branch"]
   current = yellow reverse
@@ -26,30 +46,50 @@
   remote = green
   whitespace = red reverse
 [color "diff"]
-  meta = yellow reverse
   frag = magenta reverse
-  old = red bold
+  meta = yellow reverse
   new = green bold
+  old = red bold
+[color "grep"]
+  linenumber = yellow
+  match = red reverse
 [color "status"]
   added = green
+  branch = magenta reverse
   changed = yellow
+  nobranch = red reverse
+  untracked = red
+
 [diff]
+  # diff will use (i)ndex, (w)ork tree, (c)ommit and (o)bject
   mnemonicprefix = true
+  # detect renames
   renames = copies
+
 [grep]
+  # show line numbers
   lineNumber = true
+
 [instaweb]
   httpd = webrick
+
 [push]
   default = upstream
+
 [user]
   name = Ming-Ho Yee
   email = mh@mhyee.com
 [github]
   user = mhyee
+
 [core]
-  autocrlf = input
+  # don't autoconvert CRLF
+  autocrlf = false
   editor = vim
-  whitespace = fix,trailing-space,cr-at-eol
+  # force case sensitive, even though Mac is actually case insensitive
   ignorecase = false
-  pager = less -eirF
+  # e (exit less the second time it hits EOF),
+  # F (exit if entire file can be displayed on one screen)
+  # i (smart case insensitive search) r (display raw control chars)
+  pager = less -eFir
+  whitespace = cr-at-eol,space-before-tab,trailing-space
