@@ -20,6 +20,10 @@ export PATH
 
 export EDITOR="vim"
 
+# Use vim to read man pages, thanks to
+# http://zameermanji.com/blog/2012/12/30/using-vim-as-manpager/#edit
+export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -"
+
 # Aliases
 alias m="mvim"
 alias vim="vi -p"
