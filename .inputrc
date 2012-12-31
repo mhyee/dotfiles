@@ -1,0 +1,7 @@
+set bell-style none
+set completion-ignore-case on
+
+# tab cycles through completions instead of listing them
+tab: menu-complete
+# shift tab does it in reverse
+"\e[Z": "\e-1\C-i"
