@@ -135,6 +135,21 @@ defaults write com.apple.iTunes disablePingSidebar -bool true
 # iTunes: disable all the other Ping stuff
 defaults write com.apple.iTunes disablePing -bool true
 
+###############################################################################
+# Other applications
+###############################################################################
+
+# Google Notifier: increase poll frequency to 1 minute
+defaults write com.google.GmailNotifier AutocheckInterval 1
+
+###############################################################################
+# Clean up and restart applications
+###############################################################################
+
 # Kill affected applications
-for app in Finder Dock iTunes; do killall "$app" > /dev/null 2>&1; done
+for app in Finder Dock iTunes "Google Notifier"; do killall "$app" > /dev/null 2>&1; done
+
+# Restart (some) affected applications
+for app in "Google Notifier"; do open -a "$app" > /dev/null 2>&1; done
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
