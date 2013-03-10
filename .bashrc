@@ -33,17 +33,13 @@ alias ls="ls -G"
 alias la="ls -a"
 alias ll="ls -alh"
 
-alias gf="git flow"
-alias gff="git flow feature"
-alias gfh="git flow hotfix"
-alias gfr="git flow release"
-alias gfs="git flow support"
-
-alias psx="ps aux | grep"
 alias grep="grep --color"
 alias diff="colordiff"
 alias make="colormake"
 alias be="bundle exec"
+
+function psx() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
+function fname() { find . -iname "*$@*"; }
 
 # Load perlbrew, pythonbrew and rbenv
 PERLBREW_ROOT="$HOME/.perl5"
