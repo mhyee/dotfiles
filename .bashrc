@@ -24,20 +24,6 @@ export EDITOR="vim"
 # http://zameermanji.com/blog/2012/12/30/using-vim-as-manpager/#edit
 export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-# Aliases
-alias m="mvim"
-alias vim="vi -p"
-alias vi="vi -p"
-
-alias ls="ls -G"
-alias la="ls -a"
-alias ll="ls -alh"
-
-alias grep="grep --color"
-alias diff="colordiff"
-alias make="colormake"
-alias be="bundle exec"
-
 function psx() { ps aux | grep -v grep | grep "$@" -i --color=auto; }
 function fname() { find . -iname "*$@*"; }
 
