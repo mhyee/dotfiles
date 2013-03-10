@@ -1,7 +1,43 @@
+################################################################################
+# Set some configuration variables
+################################################################################
+
+# do not ring the bell ever
 set bell-style none
+
+# tab completion is case insensitive
 set completion-ignore-case on
+
+# expand the tilde during word completion
+set expand-tilde on
+
+# add trailing slash when autocompleting a symlink to directory
+set mark-symlinked-directories on
+
+# do not autocomplete hidden files unless pattern begins with a dot
+set match-hidden-files off
+
+# Allow UTF-8 input and output
+set input-meta on
+set output-meta on
+set convert-meta off
+
+################################################################################
+# Set some custom keybindings
+################################################################################
 
 # tab cycles through completions instead of listing them
 tab: menu-complete
 # shift tab does it in reverse
 "\e[Z": "\e-1\C-i"
+
+# double tapping ctrl lists possible completions
+"\C\C": possible-completions
+
+# control-x control-r reloads inputrc
+"\C-x\C-r": re-read-init-file
+
+# more intelligent up/down behaviour
+# uses already typed text to search history
+"\e[B": history-search-forward
+"\e[A": history-search-backward
