@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Load RVM, if you are using it
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-# Add rvm gems and nginx to the path
-export PATH=$PATH:~/.gem/ruby/1.8/bin:/opt/nginx/sbin
-
 # Path to the bash it configuration
 export BASH_IT=$HOME/Documents/sandbox/dotfiles/bash-it
 
@@ -13,31 +7,27 @@ export BASH_IT=$HOME/Documents/sandbox/dotfiles/bash-it
 # location /.bash_it/themes/
 export BASH_IT_THEME='bobby'
 
-# Your place for hosting Git repos. I use this for private repos.
-export GIT_HOSTING='git@git.domain.com'
-
 # Set my editor and git editor
-export EDITOR="/usr/bin/mate -w"
-export GIT_EDITOR='/usr/bin/mate -w'
-
-# Set the path nginx
-export NGINX_PATH='/opt/nginx'
+export EDITOR="vim"
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
 
+# Setup PATH to use homebrew
+PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH
 
-# Change this to your console based IRC client of choice.
+# Use vim to read man pages, thanks to
+# http://zameermanji.com/blog/2012/12/30/using-vim-as-manpager/#edit
+export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-export IRC_CLIENT='irssi'
-
-# Set this to the command you use for todo.txt-cli
-
-export TODO="t"
-
-# Set vcprompt executable path for scm advance info in prompt (demula theme)
-# https://github.com/xvzf/vcprompt
-#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
+# Load perlbrew, pythonbrew, rbenv, and cabal bin
+PERLBREW_ROOT="$HOME/.perl5"
+export PERLBREW_ROOT
+[[ -s "$PERLBREW_ROOT/etc/bashrc" ]] && . "$PERLBREW_ROOT/etc/bashrc"
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && . "$HOME/.pythonbrew/etc/bashrc"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="$HOME/.cabal/bin:$PATH"
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
