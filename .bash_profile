@@ -5,7 +5,7 @@ export BASH_IT=$HOME/Documents/sandbox/dotfiles/bash-it
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
-export BASH_IT_THEME='bobby'
+export BASH_IT_THEME='mhyee'
 
 # Set my editor and git editor
 export EDITOR="vim"
