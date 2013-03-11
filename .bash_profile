@@ -29,5 +29,18 @@ export PERLBREW_ROOT
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.cabal/bin:$PATH"
 
+# Usage: puniq [<path>]
+# Remove duplicate entries from a PATH style value while retaining
+# the original order. Use PATH if no <path> is given.
+#
+# Example:
+# $ puniq /usr/bin:/usr/local/bin:/usr/bin
+# /usr/bin:/usr/local/bin
+puniq () {
+    echo "$1" |tr : '\n' |nl |sort -u -k 2,2 |sort -n |
+    cut -f 2- |tr '\n' : |sed -e 's/:$//' -e 's/^://'
+}
+PATH=$(puniq $PATH)
+
 # Load Bash It
 source $BASH_IT/bash_it.sh
