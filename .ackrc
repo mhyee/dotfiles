@@ -6,9 +6,3 @@
 --context
 # always use colour
 --color
-# e (exit less the second time it hits EOF),
-# F (exit if entire file can be displayed on one screen)
-# i (smart case insensitive search)
-# r (display raw control chars)
-# 4 (advance by 4 lines at a time)
---pager=less -eFir4
