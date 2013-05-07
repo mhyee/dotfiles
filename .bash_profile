@@ -29,6 +29,9 @@ export PERLBREW_ROOT
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.cabal/bin:$PATH"
 
+### Load Heroku tools
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # Usage: puniq [<path>]
 # Remove duplicate entries from a PATH style value while retaining
 # the original order. Use PATH if no <path> is given.
