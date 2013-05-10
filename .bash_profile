@@ -47,3 +47,6 @@ PATH=$(puniq $PATH)
 
 # Load Bash It
 source $BASH_IT/bash_it.sh
+
+# Fix so Ctrl+S works in Vim (Mac only)
+stty -ixon -ixoff

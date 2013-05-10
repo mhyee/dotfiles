@@ -145,6 +145,12 @@ defaults write com.google.GmailNotifier AutocheckInterval 1
 # MacVim: Don't use Lion fullscreen mode
 defaults write org.vim.MacVim MMNativeFullScreen 0
 
+# MacVim: Smooth fonts
+defaults write org.vim.MacVim AppleSmoothFixedFontsSizeThreshold 1
+
+# MacVim: Show hidden files
+defaults write org.vim.MacVim AppleShowAllFiles 1
+
 ###############################################################################
 # Clean up and restart applications
 ###############################################################################
@@ -154,5 +160,7 @@ for app in Finder Dock iTunes "Google Notifier"; do killall "$app" > /dev/null 2
 
 # Restart (some) affected applications
 for app in "Google Notifier"; do open -a "$app" > /dev/null 2>&1; done
+
+echo "MacVim may need to be restarted."
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
