@@ -9,8 +9,10 @@ set nomodeline                      " disable modelines for security
 set mouse=a                         " enable the mouse
 set autoread                        " auto reload file if changed outside vim but not inside vim
 set noerrorbells                    " disable error bells
-set novisualbell
+set novisualbell                    " disable visual bells
 set lazyredraw                      " don't redraw screen during macro playback
+set autochdir                       " change to directory of file in buffer
+set background=dark
 "colorscheme Tomorrow-Night-Bright
 
 " Persistent undo
@@ -27,6 +29,7 @@ endif
 
 "" Whitespace
 set nowrap                          " don't wrap lines
+set showbreak=↪                     " if breaking lines, show this char at beginning of line
 set tabstop=4 shiftwidth=4          " use four space tabs
 set softtabstop=4                   " backspace by four spaces
 set shiftround                      " force indents to multiples of shiftwidth
@@ -38,6 +41,7 @@ set list                            " show invisible chars
 set listchars=tab:▸\ ,trail:·
 
 "" Searching
+set path+=**                        " when using :find, search in subdirs too
 set hlsearch                        " highlight matches
 set incsearch                       " incremental searching
 set ignorecase                      " case insensitive searching
@@ -54,7 +58,7 @@ set number                          " show line numbers
 set ruler                           " show line and column number of cursor
 set cursorline                      " highlight the current line
 set laststatus=2                    " always show status line
-set nrformats=                      " make <C-x> and <C-a> handle numbers with leadings 0s
+set nrformats=hex                   " make <C-x> and <C-a> handle numbers with leadings 0s
 set colorcolumn=81                  " draw a line at 81 columns
 
 set scrolloff=3                     " cursor is always three lines from top/bottom edge of screen
@@ -71,7 +75,7 @@ set ttyfast                         " fast terminal connection
 
 set pastetoggle=<F2>                " <F2> enables paste mode, which disables autoindent
 
-set background=dark
+set nojoinspaces                    " when joining line, use one space after '.'
 
 "" Key remappings
 nnoremap ; :
@@ -131,8 +135,8 @@ vmap < <gv
 " Emacs-like beginning and end of line
 imap <C-e> <C-o>$
 imap <C-a> <C-o>^
-map <C-e> $
-map <C-a> ^
+nmap L $
+nmap H ^
 
 "" Mapleader - custom mappings
 let mapleader=","                   " remap leader from \ to ,
