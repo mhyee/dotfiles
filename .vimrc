@@ -126,7 +126,6 @@ map <C-l> <C-w>l
 " Tab shortcuts
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab> :tabnext<CR>
-nnoremap <C-t> :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab> <Esc>:tabnext<CR>i
 inoremap <C-t> <Esc>:tabnew<CR>
@@ -146,6 +145,7 @@ nmap L $
 nmap H ^
 
 "" Mapleader - custom mappings
+nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>           " quickly close window
 
 "" Quickly edit/reload vimrc

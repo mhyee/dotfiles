@@ -6,4 +6,7 @@ set runtimepath+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
+" Theme
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
 "" Install bundles
