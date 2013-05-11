@@ -4,4 +4,4 @@ setlocal shiftwidth=4
 setlocal spell
 setlocal textwidth=80
 setlocal colorcolumn=81
-setlocal formatoptions=tcqan2l1
+setlocal formatoptions=tcqn2l1
