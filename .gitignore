@@ -1,6 +1,8 @@
 .vim/.netrwhist
 .vim/backups/*
 !.vim/backups/.gitkeep
+.vim/bundle/*
+!.vim/bundle/.gitkeep
 .vim/swaps/*
 !.vim/swaps/.gitkeep
 .vim/undo/*

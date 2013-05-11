@@ -1,4 +1,9 @@
-set nocompatible                    " choose no compatibility with legacy vi
+let mapleader=","                   " remap leader from \ to ,
+let maplocalleader=","
+
+"" Vundle and bundles configuration
+source ~/.vim/bundles.vim
+
 syntax enable
 set encoding=utf-8
 set showcmd                         " display incomplete commands
@@ -10,8 +15,10 @@ set mouse=a                         " enable the mouse
 set autoread                        " auto reload file if changed outside vim but not inside vim
 set noerrorbells                    " disable error bells
 set novisualbell                    " disable visual bells
+set visualbell t_vb=                " don't beep or flash at all
 set lazyredraw                      " don't redraw screen during macro playback
 set autochdir                       " change to directory of file in buffer
+set t_Co=256                        " use 256 colors in terminal
 set background=dark
 colorscheme Tomorrow-Night-Bright
 
@@ -139,8 +146,6 @@ nmap L $
 nmap H ^
 
 "" Mapleader - custom mappings
-let mapleader=","                   " remap leader from \ to ,
-
 nnoremap <leader>q :q<CR>           " quickly close window
 
 "" Quickly edit/reload vimrc
