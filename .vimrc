@@ -13,7 +13,7 @@ set novisualbell                    " disable visual bells
 set lazyredraw                      " don't redraw screen during macro playback
 set autochdir                       " change to directory of file in buffer
 set background=dark
-"colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow-Night-Bright
 
 " Persistent undo
 set undofile
@@ -157,7 +157,3 @@ nnoremap <leader>p "*p
 nnoremap <leader>P "*P
 
 nnoremap <silent> <leader>/ :nohlsearch<CR>    " Clear highlighted searches
-
-
-
-autocmd FileType make setlocal noexpandtab

@@ -1,0 +1,7 @@
+.vim/.netrwhist
+.vim/backups/*
+!.vim/backups/.gitkeep
+.vim/swaps/*
+!.vim/swaps/.gitkeep
+.vim/undo/*
+!.vim/undo/.gitkeep
