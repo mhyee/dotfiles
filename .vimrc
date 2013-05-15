@@ -7,7 +7,7 @@ source ~/.vim/bundles.vim
 syntax enable
 set encoding=utf-8
 set showcmd                         " display incomplete commands
-set showmode                        " display the current mode
+set noshowmode                      " never display the current mode; powerline does this
 filetype plugin indent on           " load file type plugins + indentations
 set modelines=0                     " don't read modelines
 set nomodeline                      " disable modelines for security
@@ -17,10 +17,10 @@ set noerrorbells                    " disable error bells
 set novisualbell                    " disable visual bells
 set visualbell t_vb=                " don't beep or flash at all
 set lazyredraw                      " don't redraw screen during macro playback
-set autochdir                       " change to directory of file in buffer
 set t_Co=256                        " use 256 colors in terminal
 set background=dark
 colorscheme Tomorrow-Night-Bright
+set guifont=Inconsolata\ for\ Powerline:h13
 
 " Persistent undo
 set undofile
@@ -171,3 +171,18 @@ function! NumberToggle()
     set relativenumber
   endif
 endfunc
+
+" In terminal vim, let ESC leave insert mode faster
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
+
+"" Configure plugins
+
+" Powerline
+set runtimepath+=~/.vim/bundle/powerline/powerline/bindings/vim
