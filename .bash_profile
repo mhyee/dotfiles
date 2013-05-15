@@ -29,8 +29,14 @@ export PERLBREW_ROOT
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.cabal/bin:$PATH"
 
-### Load Heroku tools
+# Load Heroku tools
 export PATH="/usr/local/heroku/bin:$PATH"
+
+### FYDP stuff
+# Put waf into the path
+#export PATH="/usr/local/waf:$PATH"
+# Set JAVA_HOME
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/"
 
 # Usage: puniq [<path>]
 # Remove duplicate entries from a PATH style value while retaining
