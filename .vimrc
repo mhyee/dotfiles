@@ -86,6 +86,7 @@ set nojoinspaces                    " when joining line, use one space after '.'
 
 "" Key remappings
 nnoremap ; :
+nnoremap : ;
 
 " up/down works on logical lines, not real file lines
 nnoremap j gj
@@ -123,14 +124,8 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Tab shortcuts
-nnoremap <C-S-tab> :tabprevious<CR>
-nnoremap <C-tab> :tabnext<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab> <Esc>:tabnext<CR>i
-inoremap <C-t> <Esc>:tabnew<CR>
-
 " Shortcuts for saving
+nnoremap ;; :w<CR>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <ESC>:w<CR>a
 
@@ -146,7 +141,7 @@ nmap H ^
 
 "" Mapleader - custom mappings
 nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>q :q<CR>           " quickly close window
+nnoremap <leader>q :q<CR>
 
 "" Quickly edit/reload vimrc
 nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -162,3 +157,17 @@ nnoremap <leader>p "*p
 nnoremap <leader>P "*P
 
 nnoremap <silent> <leader>/ :nohlsearch<CR>    " Clear highlighted searches
+
+nnoremap <leader>n :call NumberToggle()<cr>
+
+" Custom functions
+
+" Toggle relative/absolute numbers
+" http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement/
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
