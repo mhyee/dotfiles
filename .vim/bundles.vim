@@ -29,8 +29,8 @@ Bundle 'tpope/vim-git'
 Bundle 'IndexedSearch'
 " Automatically insert 'end' as needed, in Ruby, C/C++ preprocessor, etc
 Bundle 'tpope/vim-endwise'
-" Search for and use project .vimrc files"
-Bundle 'krisajenkins/vim-projectlocal'
+" Search for and use project .vimrc files
+Bundle 'mhyee/vim-projectlocal'
 " Easily comment/uncomment multiple lines
 Bundle 'tpope/vim-commentary'
 " Surround text with parentheses, brackets, quotes, etc
