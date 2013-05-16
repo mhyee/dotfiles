@@ -156,9 +156,12 @@ nnoremap <leader>Y "*yy
 nnoremap <leader>p "*p
 nnoremap <leader>P "*P
 
-nnoremap <silent> <leader>/ :nohlsearch<CR>    " Clear highlighted searches
+" Clear highlighted searches
+nnoremap <silent> <leader>/ :nohlsearch<CR>
 
-nnoremap <leader>n :call NumberToggle()<cr>
+nnoremap <leader>n :call NumberToggle()<CR>
+
+nnoremap <leader>u :GundoToggle<CR>
 
 " Custom functions
 
@@ -173,6 +176,7 @@ function! NumberToggle()
 endfunc
 
 " In terminal vim, let ESC leave insert mode faster
+" Side-effect of using Powerline
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape
@@ -186,3 +190,12 @@ endif
 
 " Powerline
 set runtimepath+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+" Fugitive
+" Delete hidden Fugitive buffers
+autocmd BufReadPost fugitive://* set bufhidden=delete
+" Mapping for .. when browsing git objects
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
