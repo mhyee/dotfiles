@@ -84,7 +84,7 @@
 
 [core]
   # don't autoconvert CRLF
-  autocrlf = false
+  autocrlf = input
   editor = vim
   # force case sensitive, even though Mac is actually case insensitive
   ignorecase = false
