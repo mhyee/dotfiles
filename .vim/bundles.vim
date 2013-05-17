@@ -15,7 +15,7 @@ Bundle 'chriskempson/base16-vim'
 " Latest Ruby support for vim
 Bundle 'vim-ruby/vim-ruby'
 " Latest Markdown support for vim
-Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-markdown'
 " Latest Haskell support for vim
 Bundle 'wlangstroth/vim-haskell'
 " HTML5 syntax support
