@@ -163,6 +163,12 @@ nnoremap <leader>n :call NumberToggle()<CR>
 
 nnoremap <leader>u :GundoToggle<CR>
 
+" CtrlP mappings
+nnoremap <leader>pp :CtrlP<CR>
+nnoremap <leader>pb :CtrlPBuffer<CR>
+nnoremap <leader>pm :CtrlPMRU<CR>
+nnoremap <leader>px :CtrlPMixed<CR>
+
 " Custom functions
 
 " Toggle relative/absolute numbers
@@ -187,6 +193,10 @@ if ! has('gui_running')
 endif
 
 "" Configure plugins
+
+" vim-ruby
+" Highlight Ruby operators
+let ruby_operators=1
 
 " Powerline
 set runtimepath+=~/.vim/bundle/powerline/powerline/bindings/vim
