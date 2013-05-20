@@ -45,7 +45,7 @@ set backspace=indent,eol,start      " backspace works on everything
 set autoindent
 set copyindent                      " copy the previous indentation when autoindenting
 set list                            " show invisible chars
-set listchars=tab:▸\ ,trail:·
+set listchars=tab:▸\ ,extends:❯,precedes:❮,trail:·
 
 "" Searching
 set path+=**                        " when using :find, search in subdirs too
@@ -164,10 +164,10 @@ nnoremap <leader>n :call NumberToggle()<CR>
 nnoremap <leader>u :GundoToggle<CR>
 
 " CtrlP mappings
-nnoremap <leader>pp :CtrlP<CR>
-nnoremap <leader>pb :CtrlPBuffer<CR>
-nnoremap <leader>pm :CtrlPMRU<CR>
-nnoremap <leader>px :CtrlPMixed<CR>
+let g:ctrlp_map='<leader>f'
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>m :CtrlPMRU<CR>
+nnoremap <leader>x :CtrlPMixed<CR>
 
 " Custom functions
 
