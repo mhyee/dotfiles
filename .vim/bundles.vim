@@ -24,6 +24,8 @@ Bundle 'othree/html5-syntax.vim'
 Bundle 'hail2u/vim-css3-syntax'
 " Latest Git runtime files support for vim
 Bundle 'tpope/vim-git'
+" MIPS syntax
+Bundle 'mips.vim'
 
 " When searching, say 'At match N out of M'
 Bundle 'IndexedSearch'
