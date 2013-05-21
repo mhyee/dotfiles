@@ -169,6 +169,10 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>m :CtrlPMRU<CR>
 nnoremap <leader>x :CtrlPMixed<CR>
 
+" Syntastic mappings
+nnoremap <leader>e :Errors<CR>
+nnoremap <leader>s :SyntasticCheck<CR>
+
 " Custom functions
 
 " Toggle relative/absolute numbers
@@ -209,3 +213,20 @@ autocmd User fugitive
   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
+
+" Syntastic
+" Run a syntax check when loading a file
+let g:syntastic_check_on_open=1
+
+" Adjust the colours for errors and warnings
+highlight SyntasticErrorSign guifg=white guibg=red
+highlight SyntasticWarningSign guifg=white guibg=blue
+
+" Change the Syntastic error/warning symbols
+let g:syntastic_error_symbol='✘'
+let g:syntastic_style_error_symbol='●'
+let g:syntastic_warning_symbol='✘'
+let g:syntastic_style_warning_symbol='●'
+
+" Don't show tooltip errors
+let g:syntastic_enable_ballons=0

@@ -61,3 +61,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'sjl/gundo.vim'
 " Git wrapper
 Bundle 'tpope/vim-fugitive'
+
+" Code completion as you type
+Bundle 'Valloric/YouCompleteMe'
+" Syntax checking
+Bundle 'scrooloose/syntastic'
