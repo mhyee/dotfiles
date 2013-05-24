@@ -78,6 +78,8 @@ set splitbelow                      " open horizontal splits below
 set wildmenu                        " show completions above command line
 set wildmode=full                   " complete next full match
 
+set wildignore+=*.o,*.d,*.class
+
 set ttyfast                         " fast terminal connection
 
 set pastetoggle=<F2>                " <F2> enables paste mode, which disables autoindent
@@ -230,3 +232,7 @@ let g:syntastic_style_warning_symbol='●'
 
 " Don't show tooltip errors
 let g:syntastic_enable_ballons=0
+
+" CtrlP
+" Ignore files
+let g:ctrlp_custom_ignore='\v\.(o|d|class)$'
