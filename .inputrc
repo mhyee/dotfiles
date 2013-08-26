@@ -32,7 +32,7 @@ tab: menu-complete
 "\e[Z": "\e-1\C-i"
 
 # double tapping ctrl lists possible completions
-"\C\C": possible-completions
+#"\C\C": possible-completions
 
 # control-x control-r reloads inputrc
 "\C-x\C-r": re-read-init-file

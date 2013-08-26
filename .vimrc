@@ -17,9 +17,9 @@ set noerrorbells                    " disable error bells
 set novisualbell                    " disable visual bells
 set visualbell t_vb=                " don't beep or flash at all
 set lazyredraw                      " don't redraw screen during macro playback
-set t_Co=256                        " use 256 colors in terminal
+"set t_Co=256                        " use 256 colors in terminal
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme base16-default
 set guifont=Inconsolata\ for\ Powerline:h13
 
 " Persistent undo
@@ -88,7 +88,7 @@ set nojoinspaces                    " when joining line, use one space after '.'
 
 "" Key remappings
 nnoremap ; :
-nnoremap : ;
+"nnoremap : ;
 
 " up/down works on logical lines, not real file lines
 nnoremap j gj
