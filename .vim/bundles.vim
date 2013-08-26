@@ -26,6 +26,8 @@ Bundle 'hail2u/vim-css3-syntax'
 Bundle 'tpope/vim-git'
 " MIPS syntax
 Bundle 'mips.vim'
+" Scala
+Bundle 'jergason/scala.vim'
 
 " When searching, say 'At match N out of M'
 Bundle 'IndexedSearch'
