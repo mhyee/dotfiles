@@ -139,9 +139,6 @@ defaults write com.apple.iTunes disablePing -bool true
 # Other applications
 ###############################################################################
 
-# Google Notifier: increase poll frequency to 1 minute
-defaults write com.google.GmailNotifier AutocheckInterval 1
-
 # MacVim: Don't use Lion fullscreen mode
 defaults write org.vim.MacVim MMNativeFullScreen 0
 
