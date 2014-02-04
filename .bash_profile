@@ -21,12 +21,13 @@ export PATH
 # http://zameermanji.com/blog/2012/12/30/using-vim-as-manpager/#edit
 export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-# Load perlbrew, rbenv, and cabal bin
+# Load perlbrew, rbenv, cabal, and opam
 PERLBREW_ROOT="$HOME/.perl5"
 export PERLBREW_ROOT
 [[ -s "$PERLBREW_ROOT/etc/bashrc" ]] && . "$PERLBREW_ROOT/etc/bashrc"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.cabal/bin:$PATH"
+source $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
 # Load Heroku tools
 export PATH="/usr/local/heroku/bin:$PATH"
