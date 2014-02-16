@@ -27,7 +27,7 @@ export PERLBREW_ROOT
 [[ -s "$PERLBREW_ROOT/etc/bashrc" ]] && . "$PERLBREW_ROOT/etc/bashrc"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.cabal/bin:$PATH"
-source $HOME/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+eval `opam config env`
 
 # Load Heroku tools
 export PATH="/usr/local/heroku/bin:$PATH"
