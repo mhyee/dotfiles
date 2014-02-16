@@ -7,10 +7,9 @@
   # add
   ap = add --patch
   # commit
-  ci = commit
+  ci = commit -v
   cm = commit -m
-  cam = commit -am
-  ca = commit --amend
+  ca = commit -v --amend
   # branch
   br = branch
   # checkout
