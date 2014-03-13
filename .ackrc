@@ -6,3 +6,5 @@
 --context
 # always use colour
 --color
+# ignore IntelliJ's .idea directory
+--ignore-dir=.idea
