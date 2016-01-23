@@ -68,3 +68,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Valloric/YouCompleteMe'
 " Syntax checking
 Bundle 'scrooloose/syntastic'
+
+" Interactive proofs with Coq
+" vimbufsync is a dependency
+Bundle 'def-lkb/vimbufsync'
+Bundle 'tbelaire/coquille'
