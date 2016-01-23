@@ -39,7 +39,7 @@ export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbi
 # Put waf into the path
 #export PATH="/usr/local/waf:$PATH"
 # Set JAVA_HOME
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/"
+export JAVA_HOME=`/usr/libexec/java_home`
 
 # Usage: puniq [<path>]
 # Remove duplicate entries from a PATH style value while retaining
