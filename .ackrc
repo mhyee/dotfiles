@@ -8,3 +8,5 @@
 --color
 # ignore IntelliJ's .idea directory
 --ignore-dir=.idea
+# i (smart case insensitive search) r (display raw control chars)
+--pager=less -ir

@@ -30,7 +30,10 @@ export PATH="$HOME/.cabal/bin:$PATH"
 eval `opam config env`
 
 # Load Heroku tools
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
+
+# TeX
+export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 
 ### FYDP stuff
 # Put waf into the path
