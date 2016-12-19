@@ -19,7 +19,7 @@ export PATH
 
 # Use vim to read man pages, thanks to
 # http://zameermanji.com/blog/2012/12/30/using-vim-as-manpager/#edit
-export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+#export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
 # Load perlbrew, rbenv, cabal, and opam
 PERLBREW_ROOT="$HOME/.perl5"
