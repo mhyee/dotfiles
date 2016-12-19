@@ -59,3 +59,7 @@ source $BASH_IT/bash_it.sh
 
 # Fix so Ctrl+S works in Vim (Mac only)
 stty -ixon -ixoff
+
+# Use real GCC
+#export CC=/usr/local/bin/gcc-5
+#export CXX=/usr/local/bin/gcc-5
