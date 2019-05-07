@@ -21,19 +21,19 @@ export PATH
 # http://zameermanji.com/blog/2012/12/30/using-vim-as-manpager/#edit
 #export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 
-# Load perlbrew, rbenv, cabal, and opam
+# Load perlbrew, rbenv, cabal, opam, racket, rust, and tex
 PERLBREW_ROOT="$HOME/.perl5"
 export PERLBREW_ROOT
 [[ -s "$PERLBREW_ROOT/etc/bashrc" ]] && . "$PERLBREW_ROOT/etc/bashrc"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.cabal/bin:$PATH"
 eval `opam config env`
+export PATH=/Applications/Racket/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 
 # Load Heroku tools
 #export PATH="/usr/local/heroku/bin:$PATH"
-
-# TeX
-export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
 
 ### FYDP stuff
 # Put waf into the path
