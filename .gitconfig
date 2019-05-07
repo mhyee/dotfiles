@@ -17,17 +17,17 @@
   # diff
   df = diff
   dc = diff --cached
-  dfs = diff --stat=140
-  dcs = diff --cached --stat=140
-  dfw = diff --word-diff=color
-  dcw = diff --cached --word-diff=color
+  dfs = diff --stat
+  dcs = diff --cached --stat
+  dfw = diff --color-words='(\\w+)|.'
+  dcw = diff --cached --color-words='(\\w+)|.'
   last = diff HEAD^
   # log
   lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(cyan)%an%Creset%C(magenta)%d%Creset %s %C(green)(%cr)%Creset' --date=relative
   lo = log --oneline --decorate
   # reset
-  unstage = reset HEAD
-  uncommit = reset --soft HEAD^
+  uns = reset HEAD
+  unc = reset --soft HEAD^
   # status
   st = status
   sts = status -s
